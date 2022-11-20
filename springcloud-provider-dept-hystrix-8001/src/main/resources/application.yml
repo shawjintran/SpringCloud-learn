@@ -1,0 +1,33 @@
+server:
+  port: 8001
+#MyBatis
+#感觉是因为微服务,所以需要配置type属性,而mapper-location是因为,没有直接用开始构建项目
+#配置日志  打印sql语句
+mybatis-plus:
+  type-aliases-package: com.shaw.springcloud.pojo
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+spring:
+  application:
+    name: DeptProvider
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db01?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: '*strawberry'
+
+#Eureka的配置信息
+eureka:
+  instance:
+    instance-id: 'springcoud-provider-hystrix-8001'
+  client:
+    service-url:
+      defaultZone: 'http://localhost:7001/eureka/'
+
+#配置actuator的info信息
+info:
+  app.name: "shawjintran"
+
+
