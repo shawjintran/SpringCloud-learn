@@ -3,11 +3,14 @@ server:
 spring:
   application:
     name: springcloud-zuul #微服务名称
+  cloud:
+    nacos:
+      server-addr: localhost:8848
 # eureka 注册中心配置
-eureka:
-  client:
-    service-url:
-      defaultZone: 'http://localhost:7001/eureka/'
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: 'http://localhost:7001/eureka/'
 info:
   app.name: shaw # 项目名称
 

@@ -16,7 +16,7 @@
         <module>springcloud-consume-dept-rfeign</module>
         <module>springcloud-provider-dept-hystrix-8001</module>
         <module>springcloud-consumer-hystrix-dashboard</module>
-
+        <module>springcloud-gateway</module>
     </modules>
     <!--打包方式  pom-->
     <packaging>pom</packaging>

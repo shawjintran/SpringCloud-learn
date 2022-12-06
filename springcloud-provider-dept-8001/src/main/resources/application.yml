@@ -14,6 +14,9 @@ spring:
     url: jdbc:mysql://localhost:3306/db01?useUnicode=true&characterEncoding=utf8
     username: root
     password: '*strawberry'
+  cloud:
+    nacos:
+      server-addr: localhost:8848
 
 
 #Eureka的配置信息

@@ -7,14 +7,18 @@ spring:
     url: jdbc:mysql://localhost:3306/db01?useUnicode=true&characterEncoding=utf8
     username: root
     password: '*strawberry'
-
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+#      discovery:
+#        cluster-name: SZ
 #Eureka的配置信息
-eureka:
-  instance:
-    instance-id: 'springcoud-provider-8002'
-  client:
-    service-url:
-      defaultZone: 'http://localhost:7001/eureka/'
+#eureka:
+#  instance:
+#    instance-id: 'springcoud-provider-8002'
+#  client:
+#    service-url:
+#      defaultZone: 'http://localhost:7001/eureka/'
 
 #配置actuator的info信息
 info:
